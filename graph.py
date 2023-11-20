@@ -1,7 +1,6 @@
 import pygame
 import sys
 import random
-import datetime
 
 # Initialize Pygame
 pygame.init()
