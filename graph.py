@@ -2,20 +2,20 @@ import pygame
 import sys
 import random
 
-# Initialize Pygame
+# Initialize Pygame.
 pygame.init()
 
-# Set up the display
+# Set up the display.
 width, height = 800, 600
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Graph Visualization')
 
-# Sample data
+# Sample data.
 points = [(50, 100), (100, 200), (150, 150), (200, 300), (250, 250)]
 selected_point = None
 dragging = False
 
-# Button parameters
+# Button parameters.
 button_width, button_height = 210, 30  # Adjusted width for "Toggle Visibility"
 button_spacing = 40
 button_offset = (width - (button_width + button_spacing) * 2) // 2
@@ -23,13 +23,13 @@ add_point_button_rect = pygame.Rect(button_offset, height - 40, button_width, bu
 toggle_visibility_button_rect = pygame.Rect(add_point_button_rect.right + button_spacing, height - 40, button_width + 50, button_height)  # Adjusted width for "Toggle Visibility"
 button_color = (0, 255, 0)
 
-# Font for text
+# Font for text.
 button_font = pygame.font.Font(pygame.font.get_default_font(), 20)
 
-# Toggle variable
+# Toggle variable.
 points_visible = True
 
-# Main game loop
+# Main game loop.
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -54,34 +54,34 @@ while True:
             # Stop dragging when the mouse button is released
             dragging = False
 
-    # Clear the screen
+    # Clear the screen.
     screen.fill((255, 255, 255))
 
-    # Draw the points if they are visible
+    # Draw the points if they are visible.
     if points_visible:
         for point in points:
             pygame.draw.circle(screen, (0, 0, 255), point, 5)
 
-    # Draw the lines
+    # Draw the lines.
     for i in range(len(points) - 1):
         pygame.draw.line(screen, (0, 0, 0), points[i], points[i + 1], 2)
 
-    # Draw the "Add Point" button
+    # Draw the "Add Point" button.
     pygame.draw.rect(screen, button_color, add_point_button_rect)
     text = button_font.render('Add Point', True, (0, 0, 0))
     text_rect = text.get_rect(center=add_point_button_rect.center)
     screen.blit(text, text_rect)
 
-    # Draw the "Toggle Visibility" button
+    # Draw the "Toggle Visibility" button.
     pygame.draw.rect(screen, button_color, toggle_visibility_button_rect)
     text = button_font.render('Toggle Visibility', True, (0, 0, 0))
     text_rect = text.get_rect(center=toggle_visibility_button_rect.center)
     screen.blit(text, text_rect)
 
-    # Update the display
+    # Update the display.
     pygame.display.flip()
 
-# Exit the program
+# Exit the program.
 pygame.quit()
 sys.exit()
 
