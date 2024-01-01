@@ -1,9 +1,13 @@
 # graphing-tool
-A visual graphing tool with a easy to use GUI.
+A visual graphing tool with an easy-to-use GUI.
 
 ### Requirements:
 ```
-pip3 install pygame
+python3 -m pip install pygame
+```
+or
+```
+pip install pygame
 ```
 ### How-to-install:
 ```
@@ -14,5 +18,5 @@ cd graphing-tool
 ```
 ### Launch:
 ```
-python3 graph.py
+python graph.py
 ```
