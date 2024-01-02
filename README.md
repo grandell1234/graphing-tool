@@ -13,6 +13,7 @@ pip install pygame
 ```
 git clone https://github.com/grandell1234/graphing-tool.git
 ```
+### Enter folder:
 ```
 cd graphing-tool
 ```
