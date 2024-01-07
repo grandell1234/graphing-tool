@@ -1,5 +1,5 @@
 # graphing-tool
-A visual graphing tool with an easy-to-use GUI.
+A visual graphing tool with an easy-to-use GUI, (Graphical User Interface).
 
 ### Requirements:
 ```
