@@ -1,5 +1,5 @@
 # graphing-tool
-A visual graphing tool with an easy-to-use GUI.
+A graphing tool with an easy-to-use GUI.
 ### Requirements:
 ```
 python3 -m pip install pygame
